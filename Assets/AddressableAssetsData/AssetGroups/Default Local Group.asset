@@ -17,6 +17,11 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 0ff6260c557509c42b771358ee292c9c
   m_SerializeEntries:
+  - m_GUID: 178c97979b38a254189a04bc825185e2
+    m_Address: Assets/05.Audios/SFX/Bubble.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 64f167865a62aa045a438a7ff4a9b09e
     m_Address: Assets/04.Sprites/Icon.png
     m_ReadOnly: 0
