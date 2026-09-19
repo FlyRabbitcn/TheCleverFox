@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.UI;
 using FlyRabbit.SaveSystem;
-using System;
+using FlyRabbit.AssetManagement;
+using FlyRabbit.UIFramework;
 
 public class Temp : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class Temp : MonoBehaviour
     private void Awake()
     {
         AudioManager.AddAssetProvider(new AddressableAssetProvider());
+        InputManager.Instance.OnEscapeEvent += UIManager.ResponseEscape;
 
 
         BGMVolumeSlider.onValueChanged.AddListener(OnBGMVolumeSliderValueChanged);

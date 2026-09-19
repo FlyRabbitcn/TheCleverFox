@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "GlobalInput",
+    "maps": [
+        {
+            "name": "UI",
+            "id": "a84eee81-8dc9-423c-8623-5708604bcf63",
+            "actions": [
+                {
+                    "name": "Escape",
+                    "type": "Button",
+                    "id": "a0093b28-16cb-4911-8c91-a28f9307a830",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1a9b0573-c85a-4d79-8cb3-fc1db5212f3f",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Escape",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
