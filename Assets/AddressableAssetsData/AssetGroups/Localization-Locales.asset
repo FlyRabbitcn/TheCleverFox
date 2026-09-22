@@ -17,44 +17,44 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 4d36a3c1a44b1e249bd9bb70b693793d
   m_SerializeEntries:
-  - m_GUID: 5bc10970e15d4494fa828d31ab24a01a
-    m_Address: Japanese (Japan) (ja-JP)
+  - m_GUID: 4171694bad2e2614eadb49a087693c0e
+    m_Address: Japanese (ja)
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7485d38ee3f2c7a4fb7a4ec85bd06b02
+  - m_GUID: 7156c92c97f5295458f35f3d8d6872a8
     m_Address: French (fr)
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7513551320eee3f469e5dcbb4ec1fdd3
+  - m_GUID: 772beba3bbcb2784db4117527473bf95
+    m_Address: Chinese (Traditional) (zh-Hant)
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7a3c179c3ad3a1c4e9550f65743c8146
     m_Address: German (de)
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a5ee1312d3a2b9243aa6b72ac2c7c13d
-    m_Address: Korean (South Korea) (ko-KR)
+  - m_GUID: 83b1958ca4f7c2f4e99e5585f98d54f7
+    m_Address: Korean (ko)
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b8ce3e0d0f86e7c40ac9a51951bc6313
-    m_Address: Chinese (Simplified) (zh-CN)
+  - m_GUID: afc0a01c1aefccd448283a71e7a1c42b
+    m_Address: English (en)
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c204ee488774fd641aea5968ef1d15a7
-    m_Address: English (United States) (en-US)
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c6871351074bc41408f56591938021f8
-    m_Address: Chinese (Traditional) (zh-TW)
+  - m_GUID: be2c078d98c0a4144b6a6e847b712afd
+    m_Address: Chinese (Simplified) (zh-Hans)
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
