@@ -6,64 +6,20 @@ using UnityEngine.UI;
 using FlyRabbit.SaveSystem;
 using FlyRabbit.AssetManagement;
 using FlyRabbit.UIFramework;
+using TMPro;
 
+[RequireComponent(typeof(TMP_Text))]
 public class Temp : MonoBehaviour
 {
-    public Slider BGMVolumeSlider;
-    public Slider SFXVolumeSlider;
-    public Button BGMButton;
-    public Button SFXButton;
+    private TMP_Text m_Text;
 
-    public Text BGMVolumeText;
     private void Awake()
     {
-        AudioManager.AddAssetProvider(new AddressableAssetProvider());
-        InputManager.Instance.OnEscapeEvent += UIManager.ResponseEscape;
-
-
-        BGMVolumeSlider.onValueChanged.AddListener(OnBGMVolumeSliderValueChanged);
-        SFXVolumeSlider.onValueChanged.AddListener(OnSFXVolumeSliderValueChanged);
-        BGMButton.onClick.AddListener(OnBGMButtonClick);
-        SFXButton.onClick.AddListener(OnSFXButtonClick);
-
-
-        BGMVolumeSlider.value = SaveManager.GetValue(SaveDefine.BGMVolume);
-    }
-    private void OnEnable()
-    {
-        SaveManager.Register(SaveDefine.BGMVolume, OnBGMVolumeChanged);
+        m_Text = GetComponent<TMP_Text>();
     }
 
-    private void OnBGMVolumeChanged(int obj)
+    private void Update()
     {
-        BGMVolumeText.text = obj.ToString();
-    }
-
-    private void OnDisable()
-    {
-        SaveManager.Unregister(SaveDefine.BGMVolume, OnBGMVolumeChanged);
-    }
-
-
-    private void OnBGMButtonClick()
-    {
-        AudioManager.PlayBGM(AudioPath.BGM.Home);
-    }
-
-    private void OnSFXButtonClick()
-    {
-        AudioManager.PlaySFX(AudioPath.SFX.Bubble);
-    }
-
-    private void OnBGMVolumeSliderValueChanged(float value)
-    {
-        AudioManager.BGMVolume = (int)value;
-
-        SaveManager.SetValue(SaveDefine.BGMVolume, (int)value);
-    }
-
-    private void OnSFXVolumeSliderValueChanged(float value)
-    {
-        AudioManager.SFXVolume = (int)value;
+        m_Text.text = $"{Screen.currentResolution.width} x {Screen.currentResolution.height}";
     }
 }

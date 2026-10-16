@@ -25,7 +25,7 @@ namespace FlyRabbit.UIFramework
         /// <summary>已打开的面板集合</summary>
         private static readonly HashSet<UIPanel> m_OpenedPanels = new HashSet<UIPanel>();
 
-        /// <summary>面板资源路径</summary>
+        /// <summary>面板资源路径，需要拼接后使用，此处可修改。</summary>
         private static readonly string m_AssetPath = "UIPanel";
 
         #region Public Methods
@@ -200,7 +200,7 @@ namespace FlyRabbit.UIFramework
         private static GameObject LoadPanelPrefab<T>() where T : UIPanel
         {
             string panelTypeName = typeof(T).Name;
-            string assetPath = Path.Combine(m_AssetPath, panelTypeName);
+            string assetPath = GetAssetPath(panelTypeName);
             foreach (var provider in m_AssetProviders)
             {
                 GameObject prefab = provider.Load<GameObject>(assetPath);
@@ -211,6 +211,14 @@ namespace FlyRabbit.UIFramework
             }
             Debug.LogError($"未能找到面板预制体：{assetPath}");
             return null;
+        }
+
+        /// <summary>获得资源路径</summary>
+        /// <param name="panelTypeName"></param>
+        /// <returns></returns>
+        private static string GetAssetPath(string panelTypeName)
+        {
+            return $"{m_AssetPath}/{panelTypeName}";
         }
         #endregion
         static UIManager()

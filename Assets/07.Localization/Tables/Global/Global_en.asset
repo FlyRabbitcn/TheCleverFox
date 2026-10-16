@@ -19,7 +19,259 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 80701087744
-    m_Localized: 3
+    m_Localized: Confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 669198060150784
+    m_Localized: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2821193747456000
+    m_Localized: Start Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2831745429331968
+    m_Localized: Map Workshop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2832305071120384
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3287247749701632
+    m_Localized: Select Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3287834260201472
+    m_Localized: Use Monitor Refresh Rate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7937905387171840
+    m_Localized: Frame Rate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3299132503023616
+    m_Localized: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3299274182418432
+    m_Localized: Sound Effects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3536698527506432
+    m_Localized: Fullscreen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3537256336384000
+    m_Localized: Resolution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6532502401118208
+    m_Localized: Message
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6532670198444032
+    m_Localized: Cancel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6533883925164032
+    m_Localized: Confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6542729712300032
+    m_Localized: Exit the game?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7938215883108352
+    m_Localized: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8006400149876736
+    m_Localized: Code Team
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8009284962807808
+    m_Localized: Skybound Rabbit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8014093845590016
+    m_Localized: "Chief Procrastination Officer\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8014458364162048
+    m_Localized: "Technical Director\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8014655844577280
+    m_Localized: "AI Conversation Specialist\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8014911562903552
+    m_Localized: "Bug Creation Engineer\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8015078546534400
+    m_Localized: "Bug Fix Engineer\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8016386418601984
+    m_Localized: "Ctrl+C Engineer\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8016568703053824
+    m_Localized: "Ctrl+V Engineer\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8016735195951104
+    m_Localized: "Unity Restart Expert\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8016885754687488
+    m_Localized: "\u201CBut It Worked Yesterday\u201D Investigator\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8017000556982272
+    m_Localized: "\u201CWhy Did the Build Fail?\u201D Analyst\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8017192228286464
+    m_Localized: "Occult Technical Consultant\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8017394217578496
+    m_Localized: "Bracket Matching Specialist\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8017489717686272
+    m_Localized: "Variable Naming Consultant\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8017650867040256
+    m_Localized: "Code Archaeologist\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8017826054729728
+    m_Localized: "Git Commit Manager\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8017960775774208
+    m_Localized: Art Team
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8018129831391232
+    m_Localized: "Art Director\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8018299872669696
+    m_Localized: "Pixel Mover\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8018442361565184
+    m_Localized: "Asset Hunting Expert\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8018543721115648
+    m_Localized: "\u201CThis Asset Should Work\u201D Consultant\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8018749745328128
+    m_Localized: "UI Layout Engineer\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8018877424136192
+    m_Localized: Audio Team
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8019013395083264
+    m_Localized: "Audio Director\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8019155477131264
+    m_Localized: "Sound Effect Mover\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8019256828293120
+    m_Localized: "Audio Playback Engineer\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8025490138656768
+    m_Localized: Design Team
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8025679591174144
+    m_Localized: "Game Designer\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8025814471602176
+    m_Localized: "Level Designer\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8025964568965120
+    m_Localized: "Player Torture Designer\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8026154344443904
+    m_Localized: "Difficulty Adjustment Expert\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8026335500627968
+    m_Localized: "\u201CThis Should Be Fun\u201D Expert\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8026514811318272
+    m_Localized: "Requirement Change Specialist\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8026731321290752
+    m_Localized: "Copying Specialist\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8026868084961280
+    m_Localized: Project Management Team
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8027029607608320
+    m_Localized: "Producer\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8027174533394432
+    m_Localized: "Project Manager\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8027335183626240
+    m_Localized: "Requirement Provider\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8027475462123520
+    m_Localized: "Requirement Executor\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8027620668928000
+    m_Localized: "Requirement Rejector\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8027902735872000
+    m_Localized: "Progress Management Specialist\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8028036777439232
+    m_Localized: "Coffee Supply Chain Management\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8028261218840576
+    m_Localized: "Water Cooler Guardian\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8028396288012288
+    m_Localized: Thank You for Playing!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8028602232532992
+    m_Localized: No rabbits were harmed during development
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8030035182940160
+    m_Localized: Exit
     m_Metadata:
       m_Items: []
   references:

@@ -19,7 +19,259 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 80701087744
-    m_Localized: 5
+    m_Localized: "Best\xE4tigen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 669198060150784
+    m_Localized: Sprache
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2821193747456000
+    m_Localized: Spiel starten
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2831745429331968
+    m_Localized: Kartenwerkstatt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2832305071120384
+    m_Localized: Einstellungen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3287247749701632
+    m_Localized: "Sprache ausw\xE4hlen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3287834260201472
+    m_Localized: Monitor-Bildwiederholrate verwenden
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7937905387171840
+    m_Localized: Bildrate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3299132503023616
+    m_Localized: Musik
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3299274182418432
+    m_Localized: Soundeffekte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3536698527506432
+    m_Localized: Vollbild
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3537256336384000
+    m_Localized: "Aufl\xF6sung"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6532502401118208
+    m_Localized: Meldung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6532670198444032
+    m_Localized: Abbrechen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6533883925164032
+    m_Localized: "Best\xE4tigen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6542729712300032
+    m_Localized: "M\xF6chtest du das Spiel beenden?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7938215883108352
+    m_Localized: Mitwirkende
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8006400149876736
+    m_Localized: Programmierteam
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8009284962807808
+    m_Localized: Himmelskaninchen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8014093845590016
+    m_Localized: "Leiter der Faulenzerei\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8014458364162048
+    m_Localized: "Technischer Direktor\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8014655844577280
+    m_Localized: "KI-Dialog-Spezialist\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8014911562903552
+    m_Localized: "Bug-Entwicklungsingenieur\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8015078546534400
+    m_Localized: "Bugfix-Ingenieur\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8016386418601984
+    m_Localized: "Ctrl+C-Ingenieur\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8016568703053824
+    m_Localized: "Ctrl+V-Ingenieur\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8016735195951104
+    m_Localized: "Unity-Neustart-Experte\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8016885754687488
+    m_Localized: "\u201EGestern lief es doch noch\u201C \u2013 Ermittler\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8017000556982272
+    m_Localized: "Analyst \u201EWarum ist der Build fehlgeschlagen?\u201C\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8017192228286464
+    m_Localized: "Okkulter Technikberater\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8017394217578496
+    m_Localized: "Klammerzuordnungsspezialist\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8017489717686272
+    m_Localized: "Berater f\xFCr Variablennamen\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8017650867040256
+    m_Localized: "Code-Arch\xE4ologe\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8017826054729728
+    m_Localized: "Git-Commit-Manager\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8017960775774208
+    m_Localized: Art-Team
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8018129831391232
+    m_Localized: "Art Director\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8018299872669696
+    m_Localized: "Pixel-Schlepper\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8018442361565184
+    m_Localized: "Asset-Suchexperte\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8018543721115648
+    m_Localized: "\u201EDieses Asset sollte funktionieren\u201C-Berater\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8018749745328128
+    m_Localized: "UI-Layout-Ingenieur\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8018877424136192
+    m_Localized: Audioteam
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8019013395083264
+    m_Localized: "Audio Director\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8019155477131264
+    m_Localized: "Soundeffekt-Schlepper\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8019256828293120
+    m_Localized: "Audiowiedergabe-Ingenieur\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8025490138656768
+    m_Localized: Design-Team
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8025679591174144
+    m_Localized: "Spieledesigner\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8025814471602176
+    m_Localized: "Leveldesigner\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8025964568965120
+    m_Localized: "Spieletortur-Designer\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8026154344443904
+    m_Localized: "Schwierigkeitsanpassungsexperte\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8026335500627968
+    m_Localized: "\u201EHier sollte es Spa\xDF machen\u201C-Experte\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8026514811318272
+    m_Localized: "Spezialist f\xFCr Anforderungs\xE4nderungen\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8026731321290752
+    m_Localized: "Kopier-Spezialist\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8026868084961280
+    m_Localized: Projektmanagement-Team
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8027029607608320
+    m_Localized: "Produzent\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8027174533394432
+    m_Localized: "Projektmanager\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8027335183626240
+    m_Localized: "Anforderungssteller\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8027475462123520
+    m_Localized: "Anforderungsausf\xFChrer\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8027620668928000
+    m_Localized: "Anforderungsablehner\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8027902735872000
+    m_Localized: "Fortschrittsmanagement-Spezialist\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8028036777439232
+    m_Localized: "Kaffee-Lieferkettenmanagement\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8028261218840576
+    m_Localized: "Wasserspender-W\xE4chter\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8028396288012288
+    m_Localized: "Vielen Dank f\xFCrs Spielen!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8028602232532992
+    m_Localized: "W\xE4hrend der Entwicklung wurden keine Kaninchen verletzt"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8030035182940160
+    m_Localized: Beenden
     m_Metadata:
       m_Items: []
   references:

@@ -18,17 +18,11 @@ public class Background : MonoBehaviour
     private void Start()
     {
         AdjustToCameraSize();
-        Shader.PropertyToID("_MainTex");
     }
 
     void Update()
     {
         Roll();
-    }
-
-    private void OnValidate()
-    {
-        AdjustToCameraSize();
     }
     [ContextMenu("Adjust To Camera Size")]
     private void AdjustToCameraSize()

@@ -18,7 +18,22 @@ MonoBehaviour:
   m_GUID: 0ff6260c557509c42b771358ee292c9c
   m_SerializeEntries:
   - m_GUID: 178c97979b38a254189a04bc825185e2
-    m_Address: Assets/05.Audios/SFX/Bubble.wav
+    m_Address: Assets/05.Audios/SFX/Open.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 332e3d526c339bc47b0c7609efaa5af7
+    m_Address: UIPanel/PopupMessagePanel
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3976054f5a80de74eaf04abdc5740acb
+    m_Address: Assets/05.Audios/SFX/WaterDrop.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 421814bbd2ecba045bed0ac837dcd10d
+    m_Address: Assets/05.Audios/BGM/PenguinPop.wav
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -27,8 +42,33 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6961e65a0f2b07642b141dcde3b87f28
+    m_Address: UIPanel/SelectLanguagePanel
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 85f2c8ce1b93aec47bc898b7a9d55408
     m_Address: Assets/05.Audios/BGM/Home.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9aec37f841d4e5c459fe8cd991f75797
+    m_Address: UIPanel/SettingsPanel
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c79f3ed97f0ffa74aa263309b9a992fc
+    m_Address: Assets/05.Audios/SFX/Close.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ef1ed404f38a96b408e80f1d08f835af
+    m_Address: UIPanel/DeveloperPanel
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f01b3caa47b82c74ca06834c81d2f408
+    m_Address: UIPanel/MainPanel
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

@@ -14,7 +14,7 @@ public static class AudioManager
     /// BGM播放器
     /// </summary>
     private static readonly AudioSource m_BGMPlayer;
-    
+
     /// <summary>
     /// SFX播放器
     /// </summary>
@@ -68,6 +68,8 @@ public static class AudioManager
             m_SFXPlayer.volume = m_SFXVolume / 100f;
         }
     }
+    /// <summary>获取当前正在播放的BGM路径</summary>
+    public static string CurrentBGM { get; private set; } = string.Empty;
     #endregion
 
 
@@ -85,6 +87,7 @@ public static class AudioManager
             return;
         }
         //播放
+        CurrentBGM = path;
         m_BGMPlayer.clip = audioClip;
         m_BGMPlayer.Play();
     }
@@ -134,6 +137,10 @@ public static class AudioManager
     /// <returns></returns>
     private static AudioClip GetAudioClip(string path)
     {
+        if (string.IsNullOrEmpty(path))
+        {
+            return null;
+        }
         //先尝试从缓存中获取
         if (m_AudioClipCache.TryGetValue(path, out AudioClip result))
         {

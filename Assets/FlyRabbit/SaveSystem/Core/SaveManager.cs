@@ -37,12 +37,12 @@ namespace FlyRabbit.SaveSystem
             if (SaveData.ContainsKey(key) == false)
             {
                 result = saveKey.DefaultValue;
-                Sanitize<T>(saveKey, ref result);
             }
             else
             {
                 result = SaveData[key].ToObject<T>();
             }
+            Sanitize<T>(saveKey, ref result);
             return result;
         }
         /// <summary>
@@ -170,15 +170,23 @@ namespace FlyRabbit.SaveSystem
         /// <summary>消毒</summary>
         private static void Sanitize<T>(SaveKey<T> saveKey, ref T value)
         {
-            if (saveKey.Sanitizer != null)
+            if (saveKey.Sanitizer == null)
             {
-                T input = value;
-                bool sanitized = saveKey.Sanitizer.Invoke(ref value);
-                if (sanitized)
-                {
-                    Debug.LogWarning($"[FlyRabbit.SaveSystem] Key: {saveKey.KeyName} 被修正， 从 {input} 修正为 {value}");
-                }
+                return;
             }
+
+            T input = value;
+            bool sanitized = saveKey.Sanitizer.Invoke(ref value);
+            if (sanitized)
+            {
+                Debug.LogWarning($"[FlyRabbit.SaveSystem] Key: {saveKey.KeyName} 被修正， 从 {input} 修正为 {value}");
+            }
+
+        }
+
+        internal static void ReferenceEquals(SaveKey<bool> isFullScreen, object onIsFullScreenChanged)
+        {
+            throw new NotImplementedException();
         }
         #endregion
 

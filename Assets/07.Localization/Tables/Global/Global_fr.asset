@@ -19,7 +19,259 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 80701087744
-    m_Localized: 4
+    m_Localized: Confirmer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 669198060150784
+    m_Localized: Langue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2821193747456000
+    m_Localized: Commencer le jeu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2831745429331968
+    m_Localized: Atelier de cartes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2832305071120384
+    m_Localized: "Param\xE8tres"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3287247749701632
+    m_Localized: "S\xE9lectionner la langue"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3287834260201472
+    m_Localized: "Utiliser le taux de rafra\xEEchissement du moniteur"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7937905387171840
+    m_Localized: "Fr\xE9quence d\u2019images"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3299132503023616
+    m_Localized: Musique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3299274182418432
+    m_Localized: Effets sonores
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3536698527506432
+    m_Localized: "Plein \xE9cran"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3537256336384000
+    m_Localized: "R\xE9solution"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6532502401118208
+    m_Localized: Message
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6532670198444032
+    m_Localized: Annuler
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6533883925164032
+    m_Localized: Confirmer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6542729712300032
+    m_Localized: Voulez-vous quitter le jeu ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7938215883108352
+    m_Localized: "Cr\xE9dits"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8006400149876736
+    m_Localized: "\xC9quipe de programmation"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8009284962807808
+    m_Localized: "Lapin c\xE9leste"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8014093845590016
+    m_Localized: "Directeur de la procrastination\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8014458364162048
+    m_Localized: "Directeur technique\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8014655844577280
+    m_Localized: "Sp\xE9cialiste des conversations avec l\u2019IA\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8014911562903552
+    m_Localized: "Ing\xE9nieur en cr\xE9ation de bugs\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8015078546534400
+    m_Localized: "Ing\xE9nieur en correction de bugs \uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8016386418601984
+    m_Localized: "Ing\xE9nieur Ctrl+C\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8016568703053824
+    m_Localized: "Ing\xE9nieur Ctrl+V\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8016735195951104
+    m_Localized: "Expert en red\xE9marrage d\u2019Unity\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8016885754687488
+    m_Localized: "Enqu\xEAteur \xAB Pourtant, \xE7a marchait hier \xBB\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8017000556982272
+    m_Localized: "Analyste \xAB Pourquoi la compilation a-t-elle \xE9chou\xE9 ? \xBB\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8017192228286464
+    m_Localized: "Consultant technique occulte\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8017394217578496
+    m_Localized: "Sp\xE9cialiste de l\u2019appariement des parenth\xE8ses\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8017489717686272
+    m_Localized: "Consultant en nommage de variables\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8017650867040256
+    m_Localized: "Arch\xE9ologue du code\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8017826054729728
+    m_Localized: "Responsable des commits Git\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8017960775774208
+    m_Localized: "\xC9quipe artistique"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8018129831391232
+    m_Localized: "Directeur artistique\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8018299872669696
+    m_Localized: "Transporteur de pixels\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8018442361565184
+    m_Localized: "Expert en recherche d\u2019assets\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8018543721115648
+    m_Localized: "Consultant \xAB Cet asset devrait faire l\u2019affaire \xBB\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8018749745328128
+    m_Localized: "Ing\xE9nieur en mise en page UI\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8018877424136192
+    m_Localized: "\xC9quipe audio"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8019013395083264
+    m_Localized: "Directeur audio\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8019155477131264
+    m_Localized: "Transporteur d\u2019effets sonores\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8019256828293120
+    m_Localized: "Ing\xE9nieur en lecture audio\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8025490138656768
+    m_Localized: "\xC9quipe de design"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8025679591174144
+    m_Localized: "Concepteur de jeu\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8025814471602176
+    m_Localized: "Concepteur de niveaux\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8025964568965120
+    m_Localized: "Concepteur de torture des joueurs\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8026154344443904
+    m_Localized: "Expert en ajustement de la difficult\xE9\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8026335500627968
+    m_Localized: "Expert \xAB \xC7a devrait \xEAtre amusant ici \xBB\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8026514811318272
+    m_Localized: "Sp\xE9cialiste des modifications de sp\xE9cifications\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8026731321290752
+    m_Localized: "Sp\xE9cialiste du plagiat\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8026868084961280
+    m_Localized: "\xC9quipe de gestion de projet"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8027029607608320
+    m_Localized: "Producteur\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8027174533394432
+    m_Localized: "Chef de projet\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8027335183626240
+    m_Localized: "Demandeur des besoins\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8027475462123520
+    m_Localized: "Ex\xE9cutant des exigences\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8027620668928000
+    m_Localized: "Rejeteur de demandes\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8027902735872000
+    m_Localized: "Sp\xE9cialiste de la gestion de progression\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8028036777439232
+    m_Localized: "Gestion de la cha\xEEne d\u2019approvisionnement du caf\xE9\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8028261218840576
+    m_Localized: "Gardien du distributeur d\u2019eau\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8028396288012288
+    m_Localized: "Merci d\u2019avoir jou\xE9 !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8028602232532992
+    m_Localized: "Aucun lapin n\u2019a \xE9t\xE9 bless\xE9 pendant le d\xE9veloppement"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8030035182940160
+    m_Localized: Quitter
     m_Metadata:
       m_Items: []
   references:
