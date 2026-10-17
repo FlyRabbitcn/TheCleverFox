@@ -47,8 +47,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7b1c34df85b8551419e70990f9db3733
+    m_Address: MapGrid
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 85f2c8ce1b93aec47bc898b7a9d55408
     m_Address: Assets/05.Audios/BGM/Home.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8e31c0416b0dd8d489041d27133e24a6
+    m_Address: UIPanel/MapWorkshopPanel
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

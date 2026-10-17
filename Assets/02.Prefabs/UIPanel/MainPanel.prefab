@@ -264,6 +264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Title: {fileID: 1915181121406095218}
   m_ButtonList: {fileID: 130694709619818754}
+  m_MapWorkshopButton: {fileID: 562406804852702146}
   m_SettingsButton: {fileID: 3183148979872062659}
 --- !u!1001 &106572946597564656
 PrefabInstance:
@@ -373,6 +374,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 4511930178549678386}
   m_SourcePrefab: {fileID: 100100000, guid: a06e025407ecae349b80e14af37b4082, type: 3}
+--- !u!114 &562406804852702146 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 483166665058331442, guid: a06e025407ecae349b80e14af37b4082, type: 3}
+  m_PrefabInstance: {fileID: 106572946597564656}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2500287387312732346 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2578400562050984010, guid: a06e025407ecae349b80e14af37b4082, type: 3}

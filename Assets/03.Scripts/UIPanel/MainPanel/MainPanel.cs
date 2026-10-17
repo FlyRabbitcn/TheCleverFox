@@ -2,6 +2,7 @@
 using FlyRabbit.UIFramework;
 using DG.Tweening;
 using UnityEngine.UI;
+using System;
 public class MainPanel : UIPanel
 {
     [SerializeField]
@@ -9,6 +10,8 @@ public class MainPanel : UIPanel
     [SerializeField]
     private RectTransform m_ButtonList;
     [Space(25)]
+    [SerializeField]
+    private Button m_MapWorkshopButton;
     [SerializeField]
     private Button m_SettingsButton;
 
@@ -20,6 +23,7 @@ public class MainPanel : UIPanel
     private void Awake()
     {
         m_SettingsButton.onClick.AddListener(OnSettingsButtonClick);
+        m_MapWorkshopButton.onClick.AddListener(OnMapWorkshopButtonClick);
     }
 
     private void Start()
@@ -53,10 +57,30 @@ public class MainPanel : UIPanel
         sequence.Join(m_ButtonList.DOMoveY(m_ButtonList.position.y + m_AnimationOffset, m_AnimationDuration).SetEase(Ease.Linear));
     }
 
+    private void PlayCloseAnimation(Action callback)
+    {
+        CanvasGroup.interactable = false;
 
+        Sequence sequence = DOTween.Sequence();
+        sequence.SetLink(gameObject);
+        sequence.Append(CanvasGroup.DOFade(0, m_AnimationDuration));
+        sequence.Join(m_Title.DOMoveY(m_Title.position.y + m_AnimationOffset, m_AnimationDuration).SetEase(Ease.Linear));
+        sequence.Join(m_ButtonList.DOMoveY(m_ButtonList.position.y - m_AnimationOffset, m_AnimationDuration).SetEase(Ease.Linear));
+        sequence.AppendCallback(() => { callback?.Invoke(); });
+    }
 
     private void OnSettingsButtonClick()
     {
         UIManager.OpenPanel<SettingsPanel>();
+    }
+
+    private void OnMapWorkshopButtonClick()
+    {
+        PlayCloseAnimation(() =>
+        {
+            UIManager.CloseAllPanels();
+            UIManager.OpenPanel<MapWorkshopPanel>();
+        });
+        
     }
 }

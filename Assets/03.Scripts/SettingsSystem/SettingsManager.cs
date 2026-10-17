@@ -1,4 +1,5 @@
-﻿using FlyRabbit.SaveSystem;
+﻿using FlyRabbit.EventBus;
+using FlyRabbit.SaveSystem;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -66,6 +67,7 @@ public static class SettingsManager
         Resolution resolution = Resolutions[obj];
         // 设置屏幕分辨率，保持当前全屏模式状态
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreenMode);
+        EventBus.TriggerEvent(OnResolutionChanged.Instance);
     }
 
     private static void OnIsFullScreenChanged(bool obj)
