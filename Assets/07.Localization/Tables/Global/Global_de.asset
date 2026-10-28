@@ -274,6 +274,10 @@ MonoBehaviour:
     m_Localized: Beenden
     m_Metadata:
       m_Items: []
+  - m_Id: 10211670972231680
+    m_Localized: "M\xF6chtest du die Kartenwerkstatt wirklich verlassen?"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

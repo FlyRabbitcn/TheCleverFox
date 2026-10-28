@@ -5,6 +5,9 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem.UI;
 using System.IO;
 using UnityEngine.Pool;
+using System;
+using Object = UnityEngine.Object;
+
 namespace FlyRabbit.UIFramework
 {
     public static class UIManager
@@ -24,9 +27,6 @@ namespace FlyRabbit.UIFramework
 
         /// <summary>已打开的面板集合</summary>
         private static readonly HashSet<UIPanel> m_OpenedPanels = new HashSet<UIPanel>();
-
-        /// <summary>面板资源路径，需要拼接后使用，此处可修改。</summary>
-        private static readonly string m_AssetPath = "UIPanel";
 
         #region Public Methods
         /// <summary>
@@ -52,7 +52,7 @@ namespace FlyRabbit.UIFramework
         /// <typeparam name="T">面板类型</typeparam>
         /// <param name="openData">打开面板时传递的数据</param>
         /// <param name="sortingOrder">面板所在Canvas的排序顺序</param>
-        public static void OpenPanel<T>(OpenData openData = null, int sortingOrder = 0) where T : UIPanel
+        public static void OpenPanel<T>(OpenData openData = null, Action closeCallback = null, int sortingOrder = 0) where T : UIPanel
         {
             // 获取面板实例
             GameObject panelInstance = GetUIPanelInstance<T>(sortingOrder);
@@ -75,6 +75,8 @@ namespace FlyRabbit.UIFramework
             panelInstance.transform.SetParent(canvas.transform, false);
             // 添加到已打开面板集合
             m_OpenedPanels.Add(panel);
+            //赋予CloseCallback
+            panel.CloseCallback = closeCallback;
             // 调用面板的OnOpen方法
             panel.OnOpen(openData);
         }
@@ -96,6 +98,9 @@ namespace FlyRabbit.UIFramework
             }
             // 调用面板的OnClose方法
             panel.OnClose();
+            //调用CloseCallback并清空
+            panel.CloseCallback?.Invoke();
+            panel.CloseCallback = null;
             // 从已打开面板集合中移除
             m_OpenedPanels.Remove(panel);
             // 销毁面板实例
@@ -214,11 +219,11 @@ namespace FlyRabbit.UIFramework
         }
 
         /// <summary>获得资源路径</summary>
-        /// <param name="panelTypeName"></param>
+        /// <param name="panelType"></param>
         /// <returns></returns>
-        private static string GetAssetPath(string panelTypeName)
+        private static string GetAssetPath(string panelType)
         {
-            return $"{m_AssetPath}/{panelTypeName}";
+            return $"UIPanel/{panelType}";
         }
         #endregion
         static UIManager()

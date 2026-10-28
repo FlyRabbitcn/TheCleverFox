@@ -6,4 +6,6 @@ public static class LocalizationKey
 {
     /// <summary>是否退出游戏？</summary>
     public const string QuitGameMessage = "是否退出游戏？";
+    /// <summary>确定要退出地图工坊吗</summary>
+    public const string ExitMapWorkshopMessage = "确定要退出地图工坊吗？";
 }

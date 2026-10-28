@@ -27,9 +27,8 @@ public class GameLauncher : MonoBehaviour
         //打开第一个UI界面
         if (SaveManager.GetValue(SaveDefine.HasSelectedLanguage) == false)
         {
-            Action action = () => { UIManager.OpenPanel<MainPanel>(); };
-            CloseCallback closeCallback = new CloseCallback(action);
-            UIManager.OpenPanel<SelectLanguagePanel>(closeCallback);
+            Action closeCallback = () => { UIManager.OpenPanel<MainPanel>(); };
+            UIManager.OpenPanel<SelectLanguagePanel>(null, closeCallback);
         }
         else
         {

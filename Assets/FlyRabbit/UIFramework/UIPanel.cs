@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace FlyRabbit.UIFramework
 {
@@ -18,6 +19,10 @@ namespace FlyRabbit.UIFramework
                 return m_CanvasGroup;
             }
         }
+
+        /// <summary>面板被关闭时，由UIManager调用并清空</summary>
+        [HideInInspector]
+        public Action CloseCallback;
 
 
         #region Protected Methods

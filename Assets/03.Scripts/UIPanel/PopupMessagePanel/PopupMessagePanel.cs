@@ -42,7 +42,7 @@ public class PopupMessagePanel : UIPanel
 
     private void OnConfirmButtonClick()
     {
-        m_OpenData.ConfirmCallback?.Invoke();
         CloseSelf();
+        m_OpenData.ConfirmCallback?.Invoke();
     }
 }

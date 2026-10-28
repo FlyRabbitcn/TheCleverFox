@@ -274,6 +274,10 @@ MonoBehaviour:
     m_Localized: Exit
     m_Metadata:
       m_Items: []
+  - m_Id: 10211670972231680
+    m_Localized: Are you sure you want to exit the Map Workshop?
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -18,4 +18,9 @@ namespace FlyRabbit.EventBus
     {
         public static readonly OnMainCameraSizeChanged Instance = new OnMainCameraSizeChanged();
     }
+    /// <summary>当地图工坊内选中Item时</summary>
+    public class OnMapWorkshopItemSelected : IEventMessage
+    {
+        public MapWorkshopItemSelector ItemSelector;
+    }
 }

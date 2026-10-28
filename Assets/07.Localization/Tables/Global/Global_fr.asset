@@ -274,6 +274,10 @@ MonoBehaviour:
     m_Localized: Quitter
     m_Metadata:
       m_Items: []
+  - m_Id: 10211670972231680
+    m_Localized: "Voulez-vous vraiment quitter l\u2019atelier de cartes ?"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

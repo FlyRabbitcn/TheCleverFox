@@ -18,7 +18,7 @@ public class PopupMessageOpenData : OpenData
     }
 
 
-
+    /// <summary>退出游戏时的弹窗</summary>
     public static PopupMessageOpenData QuitGame
     {
         get
@@ -27,9 +27,26 @@ public class PopupMessageOpenData : OpenData
             return m_QuitGame;
         }
     }
+    /// <summary>退出地图工坊时的弹窗</summary>
+    public static PopupMessageOpenData ExitMapWorkshop
+    {
+        get
+        {
+            m_ExitMapWorkshop.Message = LocalizationManager.GetLocalizedString(LocalizationKey.ExitMapWorkshopMessage);
+            return m_ExitMapWorkshop;
+        }
+
+    }
+
 
     private static readonly PopupMessageOpenData m_QuitGame = new PopupMessageOpenData(string.Empty, false, () =>
     {
         Application.Quit();
+    });
+
+    private static readonly PopupMessageOpenData m_ExitMapWorkshop = new PopupMessageOpenData(string.Empty, false, () =>
+    {
+        UIManager.CloseAllPanels();
+        UIManager.OpenPanel<MainPanel>();
     });
 }
