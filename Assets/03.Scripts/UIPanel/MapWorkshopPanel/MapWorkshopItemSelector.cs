@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class MapWorkshopItemSelector : MonoBehaviour
 {
 
-    public string Name;
+    public string ItemName;
 
 
     private Button m_Button;

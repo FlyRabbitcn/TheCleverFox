@@ -17,7 +17,19 @@ namespace FlyRabbit.SaveSystem
             }
             return result;
         }
-
+        /// <summary>
+        /// 将int值限制在至少为1
+        /// </summary>
+        public static bool ClampIntToAtLeastOne(ref int value)
+        {
+            bool result = false;
+            if (value < 1)
+            {
+                value = 1;
+                result = true;
+            }
+            return result;
+        }
         /// <summary>
         /// 将int值限制在0~100之间
         /// </summary>

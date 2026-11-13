@@ -11,6 +11,7 @@ public class ButtonClickSound : MonoBehaviour
     {
         Open,
         Close,
+        Knock,
     }
 
     public ButtonClickSoundType SoundType;
@@ -33,6 +34,9 @@ public class ButtonClickSound : MonoBehaviour
                 break;
             case ButtonClickSoundType.Close:
                 AudioManager.PlaySFX(AudioPath.SFX.Close);
+                break;
+            case ButtonClickSoundType.Knock:
+                AudioManager.PlaySFX(AudioPath.SFX.Knock);
                 break;
             default:
                 break;

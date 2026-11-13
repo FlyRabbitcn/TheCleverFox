@@ -1,0 +1,122 @@
+[
+  {
+    "X": 0,
+    "Y": 0,
+    "Name": "FragileBlock"
+  },
+  {
+    "X": 0,
+    "Y": 1,
+    "Name": "FragileBlock"
+  },
+  {
+    "X": 0,
+    "Y": 9,
+    "Name": "FragileBlock"
+  },
+  {
+    "X": 0,
+    "Y": 10,
+    "Name": "FragileBlock"
+  },
+  {
+    "X": 1,
+    "Y": 0,
+    "Name": "FragileBlock"
+  },
+  {
+    "X": 1,
+    "Y": 1,
+    "Name": "Gem"
+  },
+  {
+    "X": 1,
+    "Y": 9,
+    "Name": "Gem"
+  },
+  {
+    "X": 1,
+    "Y": 10,
+    "Name": "FragileBlock"
+  },
+  {
+    "X": 8,
+    "Y": 0,
+    "Name": "FragileBlock"
+  },
+  {
+    "X": 8,
+    "Y": 1,
+    "Name": "Fox"
+  },
+  {
+    "X": 9,
+    "Y": 0,
+    "Name": "FragileBlock"
+  },
+  {
+    "X": 9,
+    "Y": 1,
+    "Name": "Gem"
+  },
+  {
+    "X": 10,
+    "Y": 0,
+    "Name": "FragileBlock"
+  },
+  {
+    "X": 10,
+    "Y": 1,
+    "Name": "Gem"
+  },
+  {
+    "X": 11,
+    "Y": 0,
+    "Name": "FragileBlock"
+  },
+  {
+    "X": 11,
+    "Y": 1,
+    "Name": "Door"
+  },
+  {
+    "X": 18,
+    "Y": 0,
+    "Name": "FragileBlock"
+  },
+  {
+    "X": 18,
+    "Y": 1,
+    "Name": "Gem"
+  },
+  {
+    "X": 18,
+    "Y": 9,
+    "Name": "Gem"
+  },
+  {
+    "X": 18,
+    "Y": 10,
+    "Name": "FragileBlock"
+  },
+  {
+    "X": 19,
+    "Y": 0,
+    "Name": "FragileBlock"
+  },
+  {
+    "X": 19,
+    "Y": 1,
+    "Name": "FragileBlock"
+  },
+  {
+    "X": 19,
+    "Y": 9,
+    "Name": "FragileBlock"
+  },
+  {
+    "X": 19,
+    "Y": 10,
+    "Name": "FragileBlock"
+  }
+]

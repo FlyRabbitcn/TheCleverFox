@@ -25,5 +25,8 @@
         /// <summary>是否已选择语言</summary>
         public static readonly SaveKey<bool> HasSelectedLanguage = new SaveKey<bool>(nameof(HasSelectedLanguage), false);
         #endregion
+
+        /// <summary>关卡进度</summary>
+        public static readonly SaveKey<int> LevelProgress = new SaveKey<int>(nameof(LevelProgress), 1, Sanitizers.ClampIntToAtLeastOne);
     }
 }

@@ -11,6 +11,8 @@ public class MainPanel : UIPanel
     private RectTransform m_ButtonList;
     [Space(25)]
     [SerializeField]
+    private Button m_StartGameButton;
+    [SerializeField]
     private Button m_MapWorkshopButton;
     [SerializeField]
     private Button m_SettingsButton;
@@ -22,6 +24,7 @@ public class MainPanel : UIPanel
 
     private void Awake()
     {
+        m_StartGameButton.onClick.AddListener(OnStartGameButtonClick);
         m_SettingsButton.onClick.AddListener(OnSettingsButtonClick);
         m_MapWorkshopButton.onClick.AddListener(OnMapWorkshopButtonClick);
     }
@@ -40,7 +43,7 @@ public class MainPanel : UIPanel
     }
 
 
-
+    /// <summary>播放打开动画</summary>
     private void PlayOpenAnimation()
     {
         //初始化
@@ -56,7 +59,8 @@ public class MainPanel : UIPanel
         sequence.Join(m_Title.DOMoveY(m_Title.position.y - m_AnimationOffset, m_AnimationDuration).SetEase(Ease.Linear));
         sequence.Join(m_ButtonList.DOMoveY(m_ButtonList.position.y + m_AnimationOffset, m_AnimationDuration).SetEase(Ease.Linear));
     }
-
+    /// <summary>播放关闭动画</summary>
+    /// <param name="callback"></param>
     private void PlayCloseAnimation(Action callback)
     {
         CanvasGroup.interactable = false;
@@ -69,6 +73,7 @@ public class MainPanel : UIPanel
         sequence.AppendCallback(() => { callback?.Invoke(); });
     }
 
+    #region Listeners
     private void OnSettingsButtonClick()
     {
         UIManager.OpenPanel<SettingsPanel>();
@@ -81,6 +86,23 @@ public class MainPanel : UIPanel
             UIManager.CloseAllPanels();
             UIManager.OpenPanel<MapWorkshopPanel>();
         });
-        
     }
+
+
+    private void OnStartGameButtonClick()
+    {
+        void OnOpenMapCallback(MapType mapType, string mapName)
+        {
+            PlayPanelOpenData playPanelOpenData = new PlayPanelOpenData(mapType, mapName);
+            UIManager.CloseAllPanels();
+            UIManager.OpenPanel<PlayPanel>(playPanelOpenData);
+        }
+
+        SelectMapPanelOpenData selectMapPanelOpenData = new SelectMapPanelOpenData(OnOpenMapCallback);
+
+        UIManager.OpenPanel<SelectMapPanel>(selectMapPanelOpenData);
+    }
+    #endregion
+
+
 }

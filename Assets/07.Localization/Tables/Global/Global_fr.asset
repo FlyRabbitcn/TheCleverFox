@@ -278,6 +278,119 @@ MonoBehaviour:
     m_Localized: "Voulez-vous vraiment quitter l\u2019atelier de cartes ?"
     m_Metadata:
       m_Items: []
+  - m_Id: 15208331035754496
+    m_Localized: Voulez-vous vraiment effacer la carte ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15217755137720320
+    m_Localized: Carte invalide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15217929704652800
+    m_Localized: "\tUn renard est requis."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15218129722621952
+    m_Localized: "Vous ne pouvez placer qu\u2019un seul renard."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15218286035943424
+    m_Localized: Au moins une gemme est requise.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15218536880488448
+    m_Localized: Une porte est requise.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15218649896009728
+    m_Localized: "\tVous ne pouvez placer qu\u2019une seule porte."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15225420026953728
+    m_Localized: Enregistrer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15226264852054016
+    m_Localized: Enregistrer la carte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15228803878174720
+    m_Localized: Saisir le nom de la carte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15233316106223616
+    m_Localized: "Nom\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15236490657480704
+    m_Localized: "Le nom ne peut pas \xEAtre vide"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15236654818344960
+    m_Localized: "Le nom ne peut pas d\xE9passer 16 caract\xE8res"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15236774045630464
+    m_Localized: "Le nom ne peut pas contenir les caract\xE8res suivants\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15236954304233472
+    m_Localized: "Une carte portant ce nom existe d\xE9j\xE0. L\u2019enregistrement
+      l\u2019\xE9crasera."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15242526957191168
+    m_Localized: Le nom est disponible
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15601571077505024
+    m_Localized: "Enregistr\xE9 avec succ\xE8s !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15610881400586240
+    m_Localized: Retour
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15855724894830592
+    m_Localized: Supprimer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15856191808946176
+    m_Localized: Ouvrir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15860067391979520
+    m_Localized: "S\xE9lectionner une carte"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16564646475677696
+    m_Localized: Niveau {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18495641001082880
+    m_Localized: Voulez-vous vraiment le supprimer ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18554206772477952
+    m_Localized: Recommencer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18554342248497152
+    m_Localized: Continuer la partie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18554583353868288
+    m_Localized: "R\xE9solution automatique"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18555263632228352
+    m_Localized: Retour au menu principal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18775413983756288
+    m_Localized: Effacer
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

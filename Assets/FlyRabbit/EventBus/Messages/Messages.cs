@@ -23,4 +23,9 @@ namespace FlyRabbit.EventBus
     {
         public MapWorkshopItemSelector ItemSelector;
     }
+    /// <summary>当选择地图页面选中MapViewer时</summary>
+    public class OnMapViewerSelected : IEventMessage
+    {
+        public MapViewer MapViewer;
+    }
 }

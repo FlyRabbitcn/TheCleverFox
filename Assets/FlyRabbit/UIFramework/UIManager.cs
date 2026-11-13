@@ -223,7 +223,7 @@ namespace FlyRabbit.UIFramework
         /// <returns></returns>
         private static string GetAssetPath(string panelType)
         {
-            return $"UIPanel/{panelType}";
+            return $"Assets/02.Prefabs/UIPanel/{panelType}.prefab";
         }
         #endregion
         static UIManager()

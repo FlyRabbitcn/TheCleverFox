@@ -38,7 +38,24 @@ public class PopupMessageOpenData : OpenData
 
     }
 
-
+    /// <summary>清空地图时的弹窗</summary>
+    public static PopupMessageOpenData ClearMap
+    {
+        get
+        {
+            m_ClearMap.Message = LocalizationManager.GetLocalizedString(LocalizationKey.ClearMapMessage);
+            return m_ClearMap;
+        }
+    }
+    /// <summary>保存成功弹窗</summary>
+    public static PopupMessageOpenData SaveSuccess
+    {
+        get
+        {
+            m_SaveSuccess.Message = LocalizationManager.GetLocalizedString(LocalizationKey.SaveSuccess);
+            return m_SaveSuccess;
+        }
+    }
     private static readonly PopupMessageOpenData m_QuitGame = new PopupMessageOpenData(string.Empty, false, () =>
     {
         Application.Quit();
@@ -49,4 +66,11 @@ public class PopupMessageOpenData : OpenData
         UIManager.CloseAllPanels();
         UIManager.OpenPanel<MainPanel>();
     });
+
+    private static readonly PopupMessageOpenData m_ClearMap = new PopupMessageOpenData(string.Empty, false, () =>
+    {
+        MapManager.Instance.ClearMap();
+    });
+
+    private static readonly PopupMessageOpenData m_SaveSuccess = new PopupMessageOpenData(string.Empty, true, null);
 }

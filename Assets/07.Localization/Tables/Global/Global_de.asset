@@ -278,6 +278,119 @@ MonoBehaviour:
     m_Localized: "M\xF6chtest du die Kartenwerkstatt wirklich verlassen?"
     m_Metadata:
       m_Items: []
+  - m_Id: 15208331035754496
+    m_Localized: "M\xF6chtest du die Karte wirklich leeren?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15217755137720320
+    m_Localized: "Ung\xFCltige Karte"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15217929704652800
+    m_Localized: "Es wird ein Fuchs ben\xF6tigt."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15218129722621952
+    m_Localized: Es kann maximal ein Fuchs platziert werden.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15218286035943424
+    m_Localized: "Es wird mindestens ein Edelstein ben\xF6tigt."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15218536880488448
+    m_Localized: "Eine T\xFCr wird ben\xF6tigt."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15218649896009728
+    m_Localized: "Es kann maximal eine T\xFCr platziert werden."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15225420026953728
+    m_Localized: Speichern
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15226264852054016
+    m_Localized: Karte speichern
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15228803878174720
+    m_Localized: Kartennamen eingeben
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15233316106223616
+    m_Localized: "Name\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15236490657480704
+    m_Localized: Der Name darf nicht leer sein
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15236654818344960
+    m_Localized: Der Name darf maximal 16 Zeichen lang sein
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15236774045630464
+    m_Localized: "Der Name darf folgende Zeichen nicht enthalten\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15236954304233472
+    m_Localized: "Eine Karte mit diesem Namen existiert bereits. Beim Speichern wird
+      sie \xFCberschrieben."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15242526957191168
+    m_Localized: "Name ist verf\xFCgbar"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15601571077505024
+    m_Localized: Erfolgreich gespeichert!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15610881400586240
+    m_Localized: "Zur\xFCck"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15855724894830592
+    m_Localized: "L\xF6schen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15856191808946176
+    m_Localized: "\xD6ffnen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15860067391979520
+    m_Localized: "Karte ausw\xE4hlen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16564646475677696
+    m_Localized: Level {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18495641001082880
+    m_Localized: "M\xF6chtest du es wirklich l\xF6schen?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18554206772477952
+    m_Localized: Neu starten
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18554342248497152
+    m_Localized: Spiel fortsetzen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18554583353868288
+    m_Localized: "Automatisch l\xF6sen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18555263632228352
+    m_Localized: "Zur\xFCck zum Hauptmen\xFC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18775413983756288
+    m_Localized: Leeren
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -278,6 +278,118 @@ MonoBehaviour:
     m_Localized: Are you sure you want to exit the Map Workshop?
     m_Metadata:
       m_Items: []
+  - m_Id: 15208331035754496
+    m_Localized: Are you sure you want to clear the map?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15217755137720320
+    m_Localized: Invalid Map
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15217929704652800
+    m_Localized: 1 fox is required.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15218129722621952
+    m_Localized: You can only have 1 fox.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15218286035943424
+    m_Localized: At least 1 gem is required.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15218536880488448
+    m_Localized: 1 door is required.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15218649896009728
+    m_Localized: You can only have 1 door.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15225420026953728
+    m_Localized: Save
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15226264852054016
+    m_Localized: Save Map
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15228803878174720
+    m_Localized: Enter Map Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15233316106223616
+    m_Localized: "Name\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15236490657480704
+    m_Localized: Name cannot be empty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15236654818344960
+    m_Localized: Name cannot exceed 16 characters
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15236774045630464
+    m_Localized: "Name cannot contain the following characters\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15236954304233472
+    m_Localized: A map with this name already exists. Saving will overwrite it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15242526957191168
+    m_Localized: Name is available
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15601571077505024
+    m_Localized: Saved Successfully!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15610881400586240
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15855724894830592
+    m_Localized: Delete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15856191808946176
+    m_Localized: Open
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15860067391979520
+    m_Localized: Select Map
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16564646475677696
+    m_Localized: Level {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18495641001082880
+    m_Localized: Are you sure you want to delete it?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18554206772477952
+    m_Localized: Restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18554342248497152
+    m_Localized: Continue Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18554583353868288
+    m_Localized: Auto Solve
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18555263632228352
+    m_Localized: Back to Main Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18775413983756288
+    m_Localized: Clear
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
