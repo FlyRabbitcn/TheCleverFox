@@ -30,12 +30,12 @@ public class SettingsPanel : UIPanel
         m_Body.DOSizeDelta(BodySizeDelta, m_AnimationDuration).SetEase(Ease.Linear).SetLink(gameObject);
     }
 
-
-    private void OnDisable()
+    public override void OnClose()
     {
+        //无论是否有修改，都保存一次，因为内容较少所以不做什么脏标记之类的优化了
         SaveManager.SaveToFile();
+        InputManager.Instance.SaveBindings();
     }
-
     private void OnCloseButtonClick()
     {
         //播放关闭动画，然后关闭页面

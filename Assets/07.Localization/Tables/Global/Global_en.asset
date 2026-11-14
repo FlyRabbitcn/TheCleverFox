@@ -390,6 +390,34 @@ MonoBehaviour:
     m_Localized: Clear
     m_Metadata:
       m_Items: []
+  - m_Id: 19214316268109824
+    m_Localized: Bind  "{0}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19234664678113280
+    m_Localized: Move Left
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19234963849428992
+    m_Localized: Move Right
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19235082258825216
+    m_Localized: Jump
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19235252669202432
+    m_Localized: Attack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19235320189108224
+    m_Localized: Place
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19236382514036736
+    m_Localized: Press a Key or Press Esc to Cancel
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -38,4 +38,6 @@ public static class LocalizationKey
     public const string LevelName = "第{0}关";
     /// <summary>确定要删除吗？</summary>
     public const string ConfirmDelete = "确定要删除吗？";
+    /// <summary>绑定"{0}"</summary>
+    public const string Bind = "绑定\"{0}\"";
 }

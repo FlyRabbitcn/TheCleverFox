@@ -47,6 +47,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2c7d20b00e7a28645b464a01daab95ba
+    m_Address: Assets/02.Prefabs/UIPanel/RebindControlsPanel.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2fe5b74a0a5326948abc770a2f31404a
     m_Address: Assets/09.LevelData/Thumbnail/27.png
     m_ReadOnly: 0

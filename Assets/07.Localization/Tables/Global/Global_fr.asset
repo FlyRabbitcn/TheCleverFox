@@ -391,6 +391,34 @@ MonoBehaviour:
     m_Localized: Effacer
     m_Metadata:
       m_Items: []
+  - m_Id: 19214316268109824
+    m_Localized: "Associer  \xAB {0} \xBB"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19234664678113280
+    m_Localized: "D\xE9placer vers la gauche"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19234963849428992
+    m_Localized: "D\xE9placer vers la droite"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19235082258825216
+    m_Localized: Sauter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19235252669202432
+    m_Localized: Attaquer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19235320189108224
+    m_Localized: Placer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19236382514036736
+    m_Localized: "Appuyez sur une touche ou sur \xC9chap pour annuler"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

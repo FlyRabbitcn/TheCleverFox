@@ -22,6 +22,7 @@ public class GameLauncher : MonoBehaviour
         UIManager.AddAssetProvider(new AddressableAssetProvider());
         //初始化InputManager
         InputManager.Instance.OnEscapeEvent += UIManager.ResponseEscape;
+        InputManager.Instance.LoadBindings();
         //初始化SettingsManager
         SettingsManager.Init();
         //打开第一个UI界面

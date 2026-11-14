@@ -391,6 +391,34 @@ MonoBehaviour:
     m_Localized: Leeren
     m_Metadata:
       m_Items: []
+  - m_Id: 19214316268109824
+    m_Localized: "\u201E{0}\u201C  zuweisen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19234664678113280
+    m_Localized: Nach links bewegen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19234963849428992
+    m_Localized: Nach rechts bewegen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19235082258825216
+    m_Localized: Springen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19235252669202432
+    m_Localized: Angreifen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19235320189108224
+    m_Localized: Platzieren
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19236382514036736
+    m_Localized: "Dr\xFCcke eine Taste oder Esc zum Abbrechen"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
