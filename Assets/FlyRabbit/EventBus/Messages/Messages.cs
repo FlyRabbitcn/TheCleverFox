@@ -28,4 +28,10 @@ namespace FlyRabbit.EventBus
     {
         public MapViewer MapViewer;
     }
+    /// <summary>当有binding被清空时触发</summary>
+    public class OnBindingCleared : IEventMessage
+    {
+        public static readonly OnBindingCleared Instance = new OnBindingCleared();
+    }
+
 }

@@ -8131,6 +8131,10 @@ PrefabInstance:
       propertyPath: m_Index
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 644857541203171861, guid: 3e8811bcb918d324082fba6c075245ff, type: 3}
+      propertyPath: m_Offset
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1113754350071255663, guid: 3e8811bcb918d324082fba6c075245ff, type: 3}
       propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
       value: 19234963849428992
