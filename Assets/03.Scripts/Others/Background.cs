@@ -20,11 +20,11 @@ public class Background : MonoBehaviour
     }
     private void OnEnable()
     {
-        EventBus.AddListener<OnMainCameraSizeChanged>(OnMainCameraSizeChanged);
+        EventBus.AddListener<EventMessage.UI.OnMainCameraSizeChanged>(OnMainCameraSizeChanged);
     }
     private void OnDisable()
     {
-        EventBus.RemoveListener<OnMainCameraSizeChanged>(OnMainCameraSizeChanged);
+        EventBus.RemoveListener<EventMessage.UI.OnMainCameraSizeChanged>(OnMainCameraSizeChanged);
     }
     private void Update()
     {
@@ -82,7 +82,7 @@ public class Background : MonoBehaviour
         }
     }
 
-    private void OnMainCameraSizeChanged(OnMainCameraSizeChanged message)
+    private void OnMainCameraSizeChanged(EventMessage.UI.OnMainCameraSizeChanged message)
     {
         AdjustToCameraSize();
     }

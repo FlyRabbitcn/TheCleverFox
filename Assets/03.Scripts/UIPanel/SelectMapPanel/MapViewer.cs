@@ -22,7 +22,7 @@ public class MapViewer : MonoBehaviour, IPoolReleaseHandler
 
     public MapType MapType { get; private set; }
     public string MapName { get; private set; }
-    private static OnMapViewerSelected m_Message = new OnMapViewerSelected();
+    private static EventMessage.UI.OnMapViewerSelected m_Message = new EventMessage.UI.OnMapViewerSelected();
     /// <summary>图片文件读取并发限制</summary>
     private static readonly SemaphoreSlim m_LoadSemaphore = new SemaphoreSlim(4);
     /// <summary>当前缩略图加载任务的取消令牌</summary>
@@ -177,7 +177,7 @@ public class MapViewer : MonoBehaviour, IPoolReleaseHandler
     private void OnButtonClick()
     {
         m_Message.MapViewer = this;
-        EventBus.TriggerEvent<OnMapViewerSelected>(m_Message);
+        EventBus.TriggerEvent<EventMessage.UI.OnMapViewerSelected>(m_Message);
     }
 
     public void OnPoolRelease()

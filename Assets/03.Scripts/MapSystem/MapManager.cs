@@ -99,7 +99,7 @@ public class MapManager : MonoBehaviour
     /// <param name="x"></param>
     /// <param name="y"></param>
     /// <param name="name"></param>
-    public void PlaceItem(int x, int y, string name)
+    public void PlaceItem(int x, int y, string name, bool IsFrozen = true)
     {
         if (!CheckMapPositionValid(new Vector2Int(x, y)))
         {
@@ -117,6 +117,8 @@ public class MapManager : MonoBehaviour
         //设置Item位置
         item.transform.position = MapToWorld(new Vector2Int(x, y));
         item.transform.SetParent(this.transform, true);
+        //设置冻结
+        item.SetFrozen(IsFrozen);
         //加入地图中
         m_MapData[x, y] = item;
     }
@@ -139,6 +141,22 @@ public class MapManager : MonoBehaviour
         Item item = m_MapData[x, y];
         m_MapData[x, y] = null;
         ItemPool.Release(item);
+    }
+    /// <summary>删除指定Item</summary>
+    /// <param name="item"></param>
+    public void RemoveItem(Item item)
+    {
+        for (int i = 0; i < m_MapData.GetLength(0); i++)
+        {
+            for (int j = 0; j < m_MapData.GetLength(1); j++)
+            {
+                if (m_MapData[i, j] == gameObject)
+                {
+                    RemoveItem(i, j);
+                    return;
+                }
+            }
+        }
     }
     /// <summary>
     /// 获取指定地图位置的Item，如果为空则返回null。
@@ -168,7 +186,7 @@ public class MapManager : MonoBehaviour
             }
         }
     }
-    /// <summary>获取当前地图中某个种类的Item的数量</summary>
+    /// <summary>获取当前地图中某个种类的Item的数量,这里每次调用都要遍历地图，消耗较高，但其实地图很小，所以我就不优化了。</summary>
     /// <typeparam name="T"></typeparam>
     /// <returns></returns>
     public int GetItemCount<T>() where T : Item

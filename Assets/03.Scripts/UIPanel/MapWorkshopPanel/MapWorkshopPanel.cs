@@ -54,7 +54,7 @@ public class MapWorkshopPanel : UIPanel
     }
     private void OnEnable()
     {
-        EventBus.AddListener<OnMapWorkshopItemSelected>(OnMapWorkshopItemSelected);
+        EventBus.AddListener<EventMessage.UI.OnMapWorkshopItemSelected>(OnMapWorkshopItemSelected);
 
 
         MapManager.Instance.SetMapGridVisible(true);
@@ -63,7 +63,7 @@ public class MapWorkshopPanel : UIPanel
 
     private void OnDisable()
     {
-        EventBus.RemoveListener<OnMapWorkshopItemSelected>(OnMapWorkshopItemSelected);
+        EventBus.RemoveListener<EventMessage.UI.OnMapWorkshopItemSelected>(OnMapWorkshopItemSelected);
 
         MapManager.Instance.SetMapGridVisible(false);
         m_CameraSizeAdapter?.SetEnableOffsset(false);
@@ -176,7 +176,7 @@ public class MapWorkshopPanel : UIPanel
 
     }
 
-    private void OnMapWorkshopItemSelected(OnMapWorkshopItemSelected message)
+    private void OnMapWorkshopItemSelected(EventMessage.UI.OnMapWorkshopItemSelected message)
     {
         m_ShineEffect.transform.SetParent(message.ItemSelector.transform, false);
         m_ShineEffect.Play();

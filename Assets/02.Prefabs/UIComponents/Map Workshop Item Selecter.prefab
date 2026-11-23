@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9061995297929597472}
   - component: {fileID: 9073035968302493750}
   - component: {fileID: 489900398242206990}
+  - component: {fileID: 7763460962977746337}
   - component: {fileID: 3106584425633786657}
   m_Layer: 5
   m_Name: Map Workshop Item Selecter
@@ -135,6 +136,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SoundType: 2
+--- !u!114 &7763460962977746337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8078167472552340459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 092ed32afa8f97b478524fa016f4dce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scale: 0.9
+  Duration: 0.06
 --- !u!114 &3106584425633786657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,4 +162,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efca963e49487854c8127f8e3bda7c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
+  ItemName: 

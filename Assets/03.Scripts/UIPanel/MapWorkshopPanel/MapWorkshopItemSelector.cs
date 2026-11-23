@@ -14,7 +14,7 @@ public class MapWorkshopItemSelector : MonoBehaviour
     private Button m_Button;
 
 
-    private static OnMapWorkshopItemSelected m_Message = new OnMapWorkshopItemSelected();
+    private static EventMessage.UI.OnMapWorkshopItemSelected m_Message = new EventMessage.UI.OnMapWorkshopItemSelected();
 
     private void Awake()
     {
@@ -29,6 +29,6 @@ public class MapWorkshopItemSelector : MonoBehaviour
     private void OnButtonClick()
     {
         m_Message.ItemSelector = this;
-        EventBus.TriggerEvent<OnMapWorkshopItemSelected>(m_Message);
+        EventBus.TriggerEvent<EventMessage.UI.OnMapWorkshopItemSelected>(m_Message);
     }
 }

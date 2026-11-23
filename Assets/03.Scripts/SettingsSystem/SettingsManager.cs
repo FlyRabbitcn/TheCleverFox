@@ -67,16 +67,13 @@ public static class SettingsManager
         Resolution resolution = Resolutions[obj];
         // 设置屏幕分辨率，保持当前全屏模式状态
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreenMode);
-        EventBus.TriggerEvent(OnResolutionChanged.Instance);
+        EventBus.TriggerEvent(EventMessage.UI.OnResolutionChanged.Instance);
     }
 
     private static void OnIsFullScreenChanged(bool obj)
     {
         if (obj)
         {
-            //Screen.SetResolution(Screen.width, Screen.height, FullScreenMode.FullScreenWindow);
-            //SaveManager.SetValue(SaveDefine.ResolutionScheme, 0, true); // 设置为100%分辨率方案
-
             Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
         }
         else

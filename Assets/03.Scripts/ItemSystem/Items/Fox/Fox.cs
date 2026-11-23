@@ -1,8 +1,147 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using FlyRabbit.StateMachine;
 using UnityEngine;
-
+[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(CheckGrounded2D))]
 public class Fox : Item
 {
+    #region Backing Fields
+    #endregion
+    private Animator Animator { get; set; }
+    public Rigidbody2D Rigidbody2D { get; private set; }
+    public CheckGrounded2D CheckGrounded2D { get; private set; }
+    /// <summary>状态机</summary>
+    private StateMachine<Fox> m_StateMachine;
 
+    /// <summary>跳跃力，根据跳跃高度计算,如果跳跃高度是固定的其实可以采取缓存策略</summary>
+    public float JumpForce { get => Mathf.Sqrt(2 * Mathf.Abs(Physics2D.gravity.y) * JumpHight); }
+    /// <summary>跳跃高度</summary>
+    public float JumpHight { get; } = 1.2f;
+    /// <summary>最大移动速度</summary>
+    public float MaxMovementSpeed { get; } = 3.4f;
+    /// <summary>移动加速度</summary>
+    public float MovementAcceleration { get; } = 12f;
+    /// <summary>运动学摩擦力</summary>
+    public float KinematicFriction { get; } = 12f;//运动学摩擦力
+    /// <summary>面朝方向</summary>
+    public int FacingDiraction { get; private set; } = 1;//面朝方向
+    private void Awake()
+    {
+        //获取组件依赖
+        Animator = GetComponent<Animator>();
+        Rigidbody2D = GetComponent<Rigidbody2D>();
+        CheckGrounded2D = GetComponent<CheckGrounded2D>();
+        //初始化状态机
+        m_StateMachine = new StateMachine<Fox>(this);
+    }
+
+    private void Update()
+    {
+        m_StateMachine.Update();
+    }
+
+    private void FixedUpdate()
+    {
+        m_StateMachine.FixedUpdate();
+    }
+
+
+    #region Public Methods
+
+    public void Idle()
+    {
+        //获取当前x轴速度
+        float currentX = Rigidbody2D.velocity.x;
+        //获取这一帧的加速度
+        float acceleration = MovementAcceleration * Time.fixedDeltaTime;
+        //计算新的x轴速度
+        float newX = Mathf.MoveTowards(currentX, 0, acceleration);
+        //赋值
+        Rigidbody2D.velocity = new Vector2(newX, Rigidbody2D.velocity.y);
+    }
+
+    /// <summary>跳跃</summary>
+    public void Jump()
+    {
+        if (CheckGrounded2D.Grounded == false)
+        {
+            return;
+        }
+        AudioManager.PlaySFX(AudioPath.SFX.GetRandomJumpPath());
+        Rigidbody2D.velocity = new Vector2(Rigidbody2D.velocity.x, JumpForce);
+    }
+    /// <summary>在空中移动</summary>
+    public void MoveInAir()
+    {
+        //在地面上无效
+        if (CheckGrounded2D.Grounded == true)
+        {
+            return;
+        }
+        //获取移动方向
+        int movementFactor = InputManager.Instance.MovementFactor;
+        //获取当前x轴速度
+        float currentX = Rigidbody2D.velocity.x;
+        //获取这一帧的加速度
+        float acceleration = MovementAcceleration * Time.fixedDeltaTime;
+        //计算出新的x轴速度
+        float newX = Mathf.MoveTowards(currentX, MaxMovementSpeed * movementFactor, acceleration);
+        //赋值速度
+        Rigidbody2D.velocity = new Vector2(newX, Rigidbody2D.velocity.y);
+        //确保面朝移动方向
+        if (movementFactor != 0 && movementFactor != FacingDiraction)
+        {
+            Flip();
+        }
+    }
+    /// <summary>在地面移动</summary>
+    public void MoveOnGround()
+    {
+        //不在地面上无效
+        if (CheckGrounded2D.Grounded == false)
+        {
+            return;
+        }
+        //获取移动方向
+        int movementFactor = InputManager.Instance.MovementFactor;
+        //获取当前x轴速度
+        float currentX = Rigidbody2D.velocity.x;
+        //获取这一帧的加速度
+        float acceleration = MovementAcceleration * Time.fixedDeltaTime;
+        //获取这一帧的运动学摩擦力
+        float Friction = KinematicFriction * Time.fixedDeltaTime;
+        //如果玩家要向右走，这时候有向左的速度，则摩擦力也提供加速度，让玩家更快转向，反之也一样。
+        if ((currentX < 0 && movementFactor == 1) || (currentX > 0 && movementFactor == -1))
+        {
+            acceleration += Friction;
+        }
+        //计算新的x轴速度
+        float newX;
+        //变速规则：当玩家的当前朝向的速度大于最大移动速度时，使用摩擦力减速，否则使用加速度加速
+        if ((movementFactor == 1 && Rigidbody2D.velocity.x > MaxMovementSpeed) || (movementFactor == -1 && Rigidbody2D.velocity.x < -MaxMovementSpeed))
+        {
+            newX = Mathf.MoveTowards(currentX, MaxMovementSpeed * movementFactor, Friction);
+        }
+        else
+        {
+            newX = Mathf.MoveTowards(currentX, MaxMovementSpeed * movementFactor, acceleration);
+        }
+        //赋值新速度
+        Rigidbody2D.velocity = new Vector2(newX, Rigidbody2D.velocity.y);
+        //确保面朝移动方向
+        if (movementFactor != 0 && movementFactor != FacingDiraction)
+        {
+            Flip();
+        }
+    }
+    #endregion
+
+    #region Private Methods
+    /// <summary>给这个游戏物体翻面</summary>
+    public void Flip()
+    {
+        FacingDiraction *= -1;
+        transform.Rotate(0f, 180f, 0f);
+    }
+    #endregion
 }

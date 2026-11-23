@@ -152,6 +152,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7b834b525fd0c86498f7a0122ca6cc5e
+    m_Address: Assets/02.Prefabs/Items/Bedrock.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 85f2c8ce1b93aec47bc898b7a9d55408
     m_Address: Assets/05.Audios/BGM/Home.wav
     m_ReadOnly: 0
@@ -244,6 +249,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c79f3ed97f0ffa74aa263309b9a992fc
     m_Address: Assets/05.Audios/SFX/Close.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf34332269b324a46ae61ca6a0e41028
+    m_Address: Assets/05.Audios/SFX/Collection.wav
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

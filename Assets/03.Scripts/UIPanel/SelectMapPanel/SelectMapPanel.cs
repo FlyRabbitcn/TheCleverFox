@@ -85,12 +85,12 @@ public class SelectMapPanel : UIPanel
     }
     private void OnEnable()
     {
-        EventBus.AddListener<OnMapViewerSelected>(OnMapViewerSelected);
+        EventBus.AddListener<EventMessage.UI.OnMapViewerSelected>(OnMapViewerSelected);
     }
 
     private void OnDisable()
     {
-        EventBus.RemoveListener<OnMapViewerSelected>(OnMapViewerSelected);
+        EventBus.RemoveListener<EventMessage.UI.OnMapViewerSelected>(OnMapViewerSelected);
     }
 
 
@@ -238,7 +238,7 @@ public class SelectMapPanel : UIPanel
         ForegroundFollow(m_CustomToggle.transform);
         LoadMapViewers(MapType.Custom);
     }
-    private void OnMapViewerSelected(OnMapViewerSelected message)
+    private void OnMapViewerSelected(EventMessage.UI.OnMapViewerSelected message)
     {
         m_ShineEffect.transform.SetParent(message.MapViewer.transform, false);
         m_ShineEffect.Play();

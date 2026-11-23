@@ -26,12 +26,12 @@ public class CameraSizeAdapter : MonoBehaviour
 
     private void OnEnable()
     {
-        EventBus.AddListener<OnResolutionChanged>(OnResolutionChanged);
+        EventBus.AddListener<EventMessage.UI.OnResolutionChanged>(OnResolutionChanged);
     }
 
     private void OnDisable()
     {
-        EventBus.RemoveListener<OnResolutionChanged>(OnResolutionChanged);
+        EventBus.RemoveListener<EventMessage.UI.OnResolutionChanged>(OnResolutionChanged);
     }
 
 
@@ -53,11 +53,11 @@ public class CameraSizeAdapter : MonoBehaviour
         // 以完整显示场景为目标，取能够容纳场景的最小尺寸
         Vector2 size = EnableOffset ? (m_SceneSize + OffsetSize) : m_SceneSize;
         m_Camera.orthographicSize = Mathf.Max(size.y * 0.5f, size.x / (2f * screenAspect));
-        EventBus.TriggerEvent<OnMainCameraSizeChanged>(OnMainCameraSizeChanged.Instance);
+        EventBus.TriggerEvent<EventMessage.UI.OnMainCameraSizeChanged>(EventMessage.UI.OnMainCameraSizeChanged.Instance);
     }
 
 
-    private void OnResolutionChanged(OnResolutionChanged message)
+    private void OnResolutionChanged(EventMessage.UI.OnResolutionChanged message)
     {
         UpdateCameraSize();
     }

@@ -36,12 +36,12 @@ public class RebindItem : MonoBehaviour
 
     private void OnEnable()
     {
-        EventBus.AddListener<OnBindingCleared>(OnBindingClearedListener);
+        EventBus.AddListener<EventMessage.InputSystem.OnBindingCleared>(OnBindingClearedListener);
     }
 
     private void OnDisable()
     {
-        EventBus.RemoveListener<OnBindingCleared>(OnBindingClearedListener);
+        EventBus.RemoveListener<EventMessage.InputSystem.OnBindingCleared>(OnBindingClearedListener);
     }
     private void Refresh()
     {
@@ -68,7 +68,7 @@ public class RebindItem : MonoBehaviour
         Refresh();
     }
 
-   private void OnBindingClearedListener(OnBindingCleared onBindingCleared)
+    private void OnBindingClearedListener(EventMessage.InputSystem.OnBindingCleared onBindingCleared)
     {
         Refresh(); ;
     }

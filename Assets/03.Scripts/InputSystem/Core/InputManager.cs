@@ -27,9 +27,55 @@ public class InputManager : MonoBehaviour, GlobalInput.IUIActions, GlobalInput.I
     }
     #endregion
 
-    #region Events
-    public event Action OnEscapeEvent;
+    #region Backing Fields
+    private bool m_AllowPlayerInput = true;
+    private int m_MovementFactor = 0;
     #endregion
+
+    #region Properties
+    /// <summary>移动因子，-1向左、0站立、1向右</summary>
+    public int MovementFactor
+    {
+        get
+        {
+            return m_MovementFactor;
+        }
+        private set
+        {
+            value = Math.Clamp(value, -1, 1);
+            m_MovementFactor = value;
+        }
+
+    }
+    /// <summary>是否允许玩家输入，机器的输入不受影响</summary>
+    public bool AllowPlayerInput
+    {
+        get
+        {
+            return m_AllowPlayerInput;
+        }
+        set
+        {
+            m_AllowPlayerInput = value;
+        }
+    }
+    #endregion
+
+
+    #region Events
+    /// <summary>UI.Esc按下事件</summary>
+    public event Action OnEscapeEvent;
+    /// <summary>跳跃事件</summary>
+    public event Action OnJumpEvent;
+
+    /// <summary>攻击事件</summary>
+    public event Action OnAttackEvent;
+
+    /// <summary>放置事件</summary>
+    public event Action OnPlaceEvent;
+    #endregion
+
+
 
 
     private GlobalInput GlobalInput { get; set; }
@@ -61,20 +107,6 @@ public class InputManager : MonoBehaviour, GlobalInput.IUIActions, GlobalInput.I
         }
         return InputControlPath.ToHumanReadableString(inputAction.bindings[bindingIndex].effectivePath, InputControlPath.HumanReadableStringOptions.OmitDevice);
     }
-
-    ///// <summary>判断指定绑定是否为空</summary>
-    ///// <param name="actionName">输入操作名称</param>
-    ///// <param name="offset">绑定偏移值</param>
-    ///// <returns>绑定为空或获取失败时返回 false</returns>
-    //public bool IsBindingEmpty(string actionName, int offset)
-    //{
-    //    if (!GetInputActionAndBindingIndex(actionName, offset, out InputAction inputAction, out int bindingIndex))
-    //    {
-    //        return false;
-    //    }
-
-    //    return string.IsNullOrEmpty(inputAction.bindings[bindingIndex].effectivePath);
-    //}
 
     /// <summary>执行交互式重映射，返回是否成功执行</summary>
     /// <param name="actionName"></param>
@@ -167,6 +199,53 @@ public class InputManager : MonoBehaviour, GlobalInput.IUIActions, GlobalInput.I
 
 
     #region Private Methods
+    /// <summary>玩家输入</summary>
+    /// <param name="actionType"></param>
+    private void PlayerInput(InputActionType actionType)
+    {
+        if (AllowPlayerInput == false)
+        {
+            return;
+        }
+        input(actionType);
+    }
+    /// <summary>机器输入</summary>
+    /// <param name="actionType"></param>
+    private void RobotInput(InputActionType actionType)
+    {
+        input(actionType);
+    }
+
+
+    /// <summary>输入总处理</summary>
+    /// <param name="actionType"></param>
+    private void input(InputActionType actionType)
+    {
+        switch (actionType)
+        {
+            case InputActionType.MoveLeft:
+                MovementFactor = -1;
+                break;
+            case InputActionType.Idle:
+                MovementFactor = 0;
+                break;
+            case InputActionType.MoveRight:
+                MovementFactor = 1;
+                break;
+            case InputActionType.Jump:
+                OnJumpEvent?.Invoke();
+                break;
+            case InputActionType.Attack:
+                OnAttackEvent?.Invoke();
+                break;
+            case InputActionType.Place:
+                OnPlaceEvent?.Invoke();
+                break;
+            default:
+                Debug.LogError("接收了未知输入，请检查");
+                break;
+        }
+    }
 
     /// <summary>获取InputAction和绑定索引</summary>
     /// <param name="actionName">Action名称</param>
@@ -250,7 +329,7 @@ public class InputManager : MonoBehaviour, GlobalInput.IUIActions, GlobalInput.I
 
         if (HasConflicting)
         {
-            EventBus.TriggerEvent<OnBindingCleared>(OnBindingCleared.Instance);
+            EventBus.TriggerEvent<EventMessage.InputSystem.OnBindingCleared>(EventMessage.InputSystem.OnBindingCleared.Instance);
         }
     }
 
@@ -274,6 +353,22 @@ public class InputManager : MonoBehaviour, GlobalInput.IUIActions, GlobalInput.I
         {
             return;
         }
+        int value = (int)context.ReadValue<float>();
+        switch (value)
+        {
+            case -1:
+                PlayerInput(InputActionType.MoveLeft);
+                break;
+            case 0:
+                PlayerInput(InputActionType.Idle);
+                break;
+            case 1:
+                PlayerInput(InputActionType.MoveRight);
+                break;
+            default:
+                Debug.LogError("接收到未知移动输入，请检查");
+                break;
+        }
     }
 
     public void OnJump(InputAction.CallbackContext context)
@@ -282,6 +377,7 @@ public class InputManager : MonoBehaviour, GlobalInput.IUIActions, GlobalInput.I
         {
             return;
         }
+        PlayerInput(InputActionType.Jump);
     }
 
     public void OnAttack(InputAction.CallbackContext context)
@@ -290,6 +386,7 @@ public class InputManager : MonoBehaviour, GlobalInput.IUIActions, GlobalInput.I
         {
             return;
         }
+        PlayerInput(InputActionType.Attack);
     }
 
     public void OnPlace(InputAction.CallbackContext context)
@@ -298,6 +395,7 @@ public class InputManager : MonoBehaviour, GlobalInput.IUIActions, GlobalInput.I
         {
             return;
         }
+        PlayerInput(InputActionType.Place);
     }
     #endregion
 
