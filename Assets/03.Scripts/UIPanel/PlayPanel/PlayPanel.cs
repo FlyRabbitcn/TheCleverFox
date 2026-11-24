@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using FlyRabbit.ExtensionMethods;
 using FlyRabbit.UIFramework;
 using NaughtyAttributes;
 using System.Collections;
@@ -63,6 +64,11 @@ public class PlayPanel : UIPanel
     {
         MapManager.Instance.ClearMap();
     }
+
+    public override void OnEscape()
+    {
+        m_OpenMenuButton.SimulateClick();
+    }
     #endregion
 
     [Button("Do Menu Entrance")]
@@ -96,7 +102,15 @@ public class PlayPanel : UIPanel
 
     private void OnOpenMenuButtonClick()
     {
-        DoMenuEntrance();
+        if (m_Menu.gameObject.activeSelf == true)
+        {
+            DOMenuClose();
+        }
+        else
+        {
+            DoMenuEntrance();
+        }
+       
     }
     private void OnRestartButtonClick()
     {

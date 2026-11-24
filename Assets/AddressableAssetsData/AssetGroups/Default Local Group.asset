@@ -17,6 +17,11 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 0ff6260c557509c42b771358ee292c9c
   m_SerializeEntries:
+  - m_GUID: 084f032f86bf77b4aaf64827be2b819c
+    m_Address: Assets/05.Audios/SFX/Jump4.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0eb5941462872da429f9cc371e0e03da
     m_Address: Assets/09.LevelData/Thumbnail/25.png
     m_ReadOnly: 0
@@ -47,6 +52,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2b764fe3095050449ab11f77e8bec44b
+    m_Address: Assets/05.Audios/SFX/Attack-Miss2.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2c7d20b00e7a28645b464a01daab95ba
     m_Address: Assets/02.Prefabs/UIPanel/RebindControlsPanel.prefab
     m_ReadOnly: 0
@@ -54,6 +64,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2fe5b74a0a5326948abc770a2f31404a
     m_Address: Assets/09.LevelData/Thumbnail/27.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 30f3c53a6c1b06d43b62137392a85e00
+    m_Address: Assets/05.Audios/SFX/Jump1.wav
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -97,6 +112,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4e50802106ebc334aa0743a42dff5b55
+    m_Address: Assets/05.Audios/SFX/Attack-Miss1.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4e55b69f5fd449241b8ae3acdf2e58ee
     m_Address: Assets/09.LevelData/Thumbnail/6.png
     m_ReadOnly: 0
@@ -104,6 +124,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 51e3a458ec856764da2f43d09765a01c
     m_Address: Assets/09.LevelData/Thumbnail/9.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 54513ea2e1bf95743a59c26e4f3c74fe
+    m_Address: Assets/05.Audios/SFX/Jump2.wav
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -139,6 +164,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6e3a537ec7e8bd747a85ca6826c12c57
     m_Address: Assets/09.LevelData/Thumbnail/28.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7365c4da9c3a0694f82a153af71d4028
+    m_Address: Assets/05.Audios/SFX/Die.wav
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -279,6 +309,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: de3b2f0b79562744aa220894678f5ce7
     m_Address: Assets/09.LevelData/Thumbnail/17.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e79a46cd53484d04885671d83324aa64
+    m_Address: Assets/05.Audios/SFX/Jump3.wav
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

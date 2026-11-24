@@ -1,4 +1,5 @@
 ﻿using FlyRabbit.StateMachine;
+using FlyRabbit.StateMachine.FoxState;
 using UnityEngine;
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Rigidbody2D))]
@@ -6,6 +7,7 @@ using UnityEngine;
 public class Fox : Item
 {
     #region Backing Fields
+    private int m_CurrentAnimation;
     #endregion
     private Animator Animator { get; set; }
     public Rigidbody2D Rigidbody2D { get; private set; }
@@ -25,16 +27,82 @@ public class Fox : Item
     public float KinematicFriction { get; } = 12f;//运动学摩擦力
     /// <summary>面朝方向</summary>
     public int FacingDiraction { get; private set; } = 1;//面朝方向
+
+
+    public int AnimationHash_VerticalState { get; private set; }
+    public int AnimationHash_Idle { get; private set; }
+    public int AnimationHash_Move { get; private set; }
+    public int AnimationHash_Dead { get; private set; }
+    public int AnimationHash_Attack { get; private set; }
+    public int AnimationHash_InAir { get; private set; }
+
+
+    public Idle IdleState { get; private set; }
+    public Move MoveState { get; private set; }
+    public Frozen FrozenState { get; private set; }
+    public Dead DeadState { get; private set; }
+    public Attack AttackState { get; private set; }
+    public InAir InAirState { get; private set; }
+
+    /// <summary>
+    /// 当前动画Hash，用于解决Bug，不要用Animator.Play，而是修改此项数值。
+    /// Bug:当物体被禁用时Animator.Play会失效，
+    /// </summary>
+    public int CurrentAnimationHash
+    {
+        get
+        {
+            return m_CurrentAnimation;
+        }
+        set
+        {
+            m_CurrentAnimation = value;
+            if (isActiveAndEnabled)
+            {
+                Animator.Play(m_CurrentAnimation);
+            }
+        }
+    }
+    /// <summary>动画播放速度</summary>
+    public float AnimationSpeed
+    {
+        get
+        {
+            return Animator.speed;
+        }
+        set
+        {
+            Animator.speed = value;
+        }
+    }
     private void Awake()
     {
-        //获取组件依赖
+        //1.获取组件依赖
         Animator = GetComponent<Animator>();
         Rigidbody2D = GetComponent<Rigidbody2D>();
         CheckGrounded2D = GetComponent<CheckGrounded2D>();
-        //初始化状态机
+        //2.初始化动画参数
+        AnimationHash_VerticalState = Animator.StringToHash("VerticalState");
+        AnimationHash_Idle = Animator.StringToHash("Idle");
+        AnimationHash_Move = Animator.StringToHash("Move");
+        AnimationHash_Dead = Animator.StringToHash("Dead");
+        AnimationHash_Attack = Animator.StringToHash("Attack");
+        AnimationHash_InAir = Animator.StringToHash("InAir");
+        //3.初始化状态机
         m_StateMachine = new StateMachine<Fox>(this);
+        IdleState = new Idle(m_StateMachine);
+        MoveState = new Move(m_StateMachine);
+        FrozenState = new Frozen(m_StateMachine);
+        DeadState = new Dead(m_StateMachine);
+        AttackState = new Attack(m_StateMachine);
+        InAirState = new InAir(m_StateMachine);
+        m_StateMachine.ChangeState(IdleState);
     }
-
+    private void OnEnable()
+    {
+        //Bug Fixed
+        Animator.Play(CurrentAnimationHash);
+    }
     private void Update()
     {
         m_StateMachine.Update();
@@ -46,7 +114,30 @@ public class Fox : Item
     }
 
 
+    public override void Initialize()
+    {
+        FacingDiraction = 1;
+        transform.localRotation = Quaternion.Euler(Vector3.zero);
+    }
+
+    protected override void OnFreeze()
+    {
+        m_StateMachine.ChangeState(FrozenState);
+    }
+    protected override void OnUnfreeze()
+    {
+        m_StateMachine.ChangeState(IdleState);
+    }
     #region Public Methods
+    /// <summary>
+    /// 更新动画参数：VerticalState，
+    /// 这个参数用来代表玩家当前是在上升还是在下落，
+    /// -1为下落，1为上升。
+    /// </summary>
+    public void UpdateVerticalState()
+    {
+        Animator.SetFloat(AnimationHash_VerticalState, Rigidbody2D.velocity.y > 0 ? 1 : -1);
+    }
 
     public void Idle()
     {
@@ -133,6 +224,17 @@ public class Fox : Item
         {
             Flip();
         }
+    }
+
+    public void Attack()
+    {
+        m_StateMachine.ChangeState(AttackState);
+        AudioManager.PlaySFX(AudioPath.SFX.GetRandomAttackMissPath());
+    }
+
+    public void Place()
+    {
+
     }
     #endregion
 

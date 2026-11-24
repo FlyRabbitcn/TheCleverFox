@@ -22,20 +22,32 @@ public static class AudioPath
 
         public const string Jump1 = "Assets/05.Audios/SFX/Jump1.wav";
         public const string Jump2 = "Assets/05.Audios/SFX/Jump2.wav";
-        public const string Jump3 = "Assets/05.Audios/SFX/Jump3.wav";
-        public const string Jump4 = "Assets/05.Audios/SFX/Jump4.wav";
+
+        public const string Die = "Assets/05.Audios/SFX/Die.wav";
+
+        public const string AttackMiss1 = "Assets/05.Audios/SFX/Attack-Miss1.wav";
+        public const string AttackMiss2 = "Assets/05.Audios/SFX/Attack-Miss2.wav";
 
         /// <summary>获得一个随机跳跃音效地址</summary>
         public static string GetRandomJumpPath()
         {
-            int number = Random.Range(1, 5);
+            int number = Random.Range(1, 3);
             return number switch
             {
                 1 => Jump1,
                 2 => Jump2,
-                3 => Jump3,
-                4 => Jump4,
                 _ => Jump1,
+            };
+        }
+
+        public static string GetRandomAttackMissPath()
+        {
+            int number = Random.Range(1, 3);
+            return number switch
+            {
+                1 => AttackMiss1,
+                2 => AttackMiss2,
+                _ => AttackMiss1,
             };
         }
     }

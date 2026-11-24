@@ -1,5 +1,6 @@
 ﻿using FlyRabbit.EventBus;
 using FlyRabbit.UIFramework;
+using FlyRabbit.UITools;
 using System;
 using System.IO;
 using UnityEngine;
@@ -339,7 +340,7 @@ public class InputManager : MonoBehaviour, GlobalInput.IUIActions, GlobalInput.I
     #region 接口实现
     public void OnEscape(InputAction.CallbackContext context)
     {
-        if (context.canceled == false)
+        if (context.canceled == false || ShouldFilterMouseInput(context))
         {
             return;
         }
@@ -349,7 +350,7 @@ public class InputManager : MonoBehaviour, GlobalInput.IUIActions, GlobalInput.I
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        if (context.started == false && context.canceled == false)
+        if ((context.started == false && context.canceled == false) || ShouldFilterMouseInput(context))
         {
             return;
         }
@@ -373,7 +374,7 @@ public class InputManager : MonoBehaviour, GlobalInput.IUIActions, GlobalInput.I
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (context.started == false)
+        if (context.started == false || ShouldFilterMouseInput(context))
         {
             return;
         }
@@ -382,7 +383,7 @@ public class InputManager : MonoBehaviour, GlobalInput.IUIActions, GlobalInput.I
 
     public void OnAttack(InputAction.CallbackContext context)
     {
-        if (context.started == false)
+        if (context.started == false || ShouldFilterMouseInput(context))
         {
             return;
         }
@@ -391,7 +392,7 @@ public class InputManager : MonoBehaviour, GlobalInput.IUIActions, GlobalInput.I
 
     public void OnPlace(InputAction.CallbackContext context)
     {
-        if (context.started == false)
+        if (context.started == false || ShouldFilterMouseInput(context))
         {
             return;
         }
@@ -399,4 +400,15 @@ public class InputManager : MonoBehaviour, GlobalInput.IUIActions, GlobalInput.I
     }
     #endregion
 
+    /// <summary>过滤鼠标左键的输入，如果点击了UI则不响应操作输入</summary>
+    private bool ShouldFilterMouseInput(InputAction.CallbackContext context)
+    {
+        // 非鼠标输入不需要过滤
+        if (context.control.device is not Mouse)
+        {
+            return false;
+        }
+
+        return UITools.IsPointerOverUI();
+    }
 }
